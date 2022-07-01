@@ -1,0 +1,35 @@
+# Ignore dependencies that are managed with Composer.
+# Generally you should only ignore the root vendor directory. It's important
+# that core/assets/vendor and any other vendor directories within contrib or
+# custom module, theme, etc., are not ignored unless you purposely do so.
+#Composer vendor
+vendor/
+vendor/.git
+vendor/composer
+# Ignore configuration files that may contain sensitive information.
+settings.local.php
+settings.php
+
+# Ignore contrib modules, libraries & themes.
+web/modules/contrib
+web/themes/contrib
+web/libraries
+
+#Drupal core
+web/core
+**/.DS_Store
+
+# user specific
+.history
+.idea/
+
+
+# Ignore paths that contain user-generated content.
+web/sites/*/files
+web/sites/*/private
+
+# Ignore sensitive information
+.lando.yml
+
+# Ignore theme node modules
+web/themes/custom/bluetheme/node_modules
