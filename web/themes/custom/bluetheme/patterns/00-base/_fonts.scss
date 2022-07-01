@@ -1,0 +1,21 @@
+
+// COMPONENT : FONT FACE
+
+$fontPath: '../media/fonts/';
+
+@mixin font($family, $name, $weight, $style: normal){
+  @font-face {
+    font: {
+      family: $family;
+      style: $style;
+      weight: $weight;
+    }
+    src: url($fontPath + $family + '-' + $name + '.woff2') format('woff2'),
+         url($fontPath + $family + '-' + $name + '.woff') format('woff');
+  }
+}
+
+@include font('McKinseySans', 'Light', 300);
+@include font('McKinseySans', 'Regular', 400);
+@include font('McKinseySans', 'Medium', 500);
+@include font('Bower', 'Bold', 700);

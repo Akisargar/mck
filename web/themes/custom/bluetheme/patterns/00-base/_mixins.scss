@@ -1,0 +1,129 @@
+@mixin cta-link {
+  min-width: 221px;
+  margin: 7px 0 14px;
+  padding: 12px;
+  border: solid 1px $mck-blue;
+  text-align: center;
+  display: inline-block;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+@mixin header1 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-family: $secondary-font;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 44px;
+    line-height: 1.18;
+  }
+}
+
+@mixin header2 {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: $primary-font;
+}
+
+@mixin header3 {
+  font-size: 16px;
+  line-height: 1.56;
+  font-weight: 300;
+  font-family: $primary-font;
+}
+
+@mixin description {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: $primary-font;
+  @include media-breakpoint-up(lg) {
+    font-size: 20px;
+  }
+}
+
+@mixin cta-blue {
+  background-color: $main-blue;
+  font-size: 15px;
+  line-height: 1.8;
+  color: $white;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    position: absolute;
+    content: "\e608";
+    color: $white;
+    -webkit-transition: right 0.4s, color 120ms;
+    transition: right 0.4s, color 120ms;
+    margin: 0;
+    font-family: "mck-icons";
+    font-size: 14px;
+  }
+}
+
+@mixin cta-black {
+  background-color: $black;
+  font-size: 15px;
+  line-height: 1.8;
+  color: $white;
+  padding: 16px 126px 16px 26px;
+}
+
+@mixin cta-black {
+  background-color: $white;
+  font-size: 15px;
+  line-height: 1.8;
+  color: $red;
+  padding: 16px 126px 16px 26px;
+}
+
+@mixin link-arrow {
+  @include header3;
+
+  color: $white;
+  margin-top: 24px;
+  padding-right: 20px;
+
+  &::after {
+    position: relative;
+    left: 20px;
+    content: "\e608";
+    color: $main-blue;
+    -webkit-transition: right 0.4s, color 120ms;
+    transition: right 0.4s, color 120ms;
+    margin: 0;
+    top: 2px;
+    font-family: "mck-icons";
+  }
+
+  &:hover {
+    color: $main-blue;
+    text-decoration: none;
+
+    &::after {
+      left: 30px;
+      transition: left 0.4s, color 120ms;
+    }
+  }
+}
+
+@mixin form_texts {
+  border: 1px solid $base-gray;
+
+  @include media-breakpoint-up(lg) {
+    border: none;
+    border-bottom: 1px solid $base-gray;
+  }
+  &:focus {
+    border: 1px solid $base-gray;
+
+    @include media-breakpoint-up(lg) {
+      border: none;
+      border-bottom: 1px solid $base-gray;
+    }
+  }
+}

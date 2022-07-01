@@ -1,0 +1,18 @@
+global-styling:
+  css:
+    theme:
+      dist/css/styles.css: {}
+  js:
+    js/main.js: {}
+    js/custom.js: {}
+  dependencies:
+  - core/jquery 
+  - core/drupal
+  - core/drupal.ajax
+  - bluetheme/value-chain
+  - core/once
+
+value-chain:
+  js:
+    js/drupal.behaviours.ValueChain.js: {}
+    js/drupal.behavioursTeams.js: {}

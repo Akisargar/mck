@@ -1,0 +1,29 @@
+type: theme
+base theme: false
+core_version_requirement: ^8.8.0 || ^9
+
+name: 'Blue Theme'
+description: 'Blue Theme'
+package: 'Custom'
+
+libraries:
+  - 'bluetheme/global-styling'
+  - 'bluetheme/bootstrap'
+
+
+regions:
+  header_hamburger: 'Hamburger'
+  header_menu: 'Header menu'
+  header_search: 'Header search'
+  breadcrumb: 'Breadcrumb'
+  content_top_left: 'Content Top Left'
+  content_top_right: 'Content Top Right'
+  content: 'Content'
+  sidebar_right: 'Sidebar Right'
+  footer: 'Footer'
+  hidden: 'Hidden'
+
+
+entity_print:
+  node:
+    all: 'bluetheme/print-styling'
